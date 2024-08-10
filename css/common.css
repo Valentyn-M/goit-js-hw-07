@@ -1,0 +1,369 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+textarea,
+button,
+input {
+	font-weight: inherit;
+	font-size: inherit;
+	color: inherit;
+	font-family: inherit;
+}
+
+button {
+	cursor: pointer;
+	background-color: inherit;
+}
+
+address {
+	font-style: normal;
+}
+
+/* ========================================================================================================================== */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+
+body {
+	margin: 16px;
+	font-family: "Montserrat", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #fff;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.04em;
+	color: #2e2f42;
+}
+
+body>p>a,
+body>ul>li>a {
+	border-radius: 8px;
+	padding: 8px 16px;
+	background-color: #4e75ff;
+	color: #fff;
+	font-weight: 500;
+	transition: background-color 0.3s ease 0s;
+	display: inline-block;
+	margin-bottom: 16px;
+}
+
+body>p>a:hover,
+body>p>a:focus,
+body>ul>li>a:hover,
+body>ul>li>a:focus {
+	background-color: #6c8cff;
+	outline: none;
+}
+
+/* #region task-1 */
+
+#categories {
+	max-width: 392px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.item {
+	border-radius: 8px;
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	background: #f6f6fe;
+}
+
+.item h2 {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.33333;
+}
+
+.item ul {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.item li {
+	border: 1px solid #808080;
+	border-radius: 4px;
+	padding: 8px 16px;
+	height: 40px;
+}
+
+/* #endregion */
+
+
+/* #region task-2 */
+
+.gallery {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.galery-img {
+	object-fit: cover;
+	height: 100%;
+}
+
+@media (min-width: 480px) {
+	.gallery {
+		flex-direction: row;
+	}
+}
+
+@media (min-width: 768px) {
+	.gallery {
+		gap: 24px;
+	}
+}
+
+/* #endregion */
+
+
+/* #region task-3 */
+
+#name-input {
+	border: 1px solid #808080;
+	border-radius: 4px;
+	padding: 8px 16px;
+	margin-bottom: 16px;
+	transition: border-color 0.3s ease 0s;
+	outline: none;
+	height: 40px;
+}
+
+#name-input:hover {
+	border-color: #000;
+}
+
+#name-input:focus {
+	border-color: #808080;
+}
+
+#name-input::placeholder {
+	letter-spacing: 0.04em;
+	color: #2e2f42;
+}
+
+#name-input~h1 {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.33333;
+}
+
+/* #endregion */
+
+
+/* #region task-4 */
+
+.login-form {
+	border-radius: 8px;
+	padding: 24px;
+	max-width: 408px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.login-form label {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.login-form input {
+	border: 1px solid #808080;
+	border-radius: 4px;
+	padding: 8px 16px;
+	outline: none;
+	height: 40px;
+}
+
+.login-form input:hover {
+	border-color: #000;
+}
+
+.login-form input:focus {
+	border-color: #808080;
+}
+
+.login-form input::placeholder {
+	letter-spacing: 0.04em;
+	color: #2e2f42;
+}
+
+.login-form button {
+	margin-top: 8px;
+	border-radius: 8px;
+	padding: 8px 16px;
+	background-color: #4e75ff;
+	color: #fff;
+	font-weight: 500;
+	transition: background-color 0.3s ease 0s;
+	width: max-content;
+	min-height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+}
+
+.login-form button:hover,
+.login-form button:focus {
+	background-color: #6c8cff;
+}
+
+
+/* #endregion */
+
+
+/* #region task-5 */
+
+.widget {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.change-color {
+	border-radius: 8px;
+	padding: 8px 16px;
+	background-color: #4e75ff;
+	color: #fff;
+	font-weight: 500;
+	transition: background-color 0.3s ease 0s;
+	width: max-content;
+	min-height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.change-color:hover,
+.change-color:focus {
+	background-color: #6c8cff;
+	outline: none;
+}
+
+/* #endregion */
+
+
+/* #region rask-5 */
+
+#controls,
+#boxes {
+	display: flex;
+	gap: 16px;
+	border-radius: 8px;
+	padding: 32px;
+	background: #f6f6fe;
+	flex-wrap: wrap;
+	width: fit-content;
+}
+
+#controls {
+	margin-bottom: 16px;
+}
+
+#controls input {
+	border: 1px solid #808080;
+	border-radius: 8px;
+	padding: 8px 72px;
+	height: 40px;
+	transition: border-color 0.3s ease 0s;
+	outline: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#controls input:hover {
+	border-color: #000;
+}
+
+#controls input:focus {
+	border-color: #808080;
+}
+
+#controls input::placeholder {
+	letter-spacing: 0.04em;
+	color: #2e2f42;
+}
+
+#controls button {
+	border-radius: 8px;
+	padding: 8px 16px;
+	background-color: #4e75ff;
+	color: #fff;
+	font-weight: 500;
+	transition: background-color 0.3s ease 0s;
+	width: max-content;
+	min-height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#controls button:hover,
+#controls button:focus {
+	background-color: #6c8cff;
+	outline: none;
+}
+
+#controls button[data-destroy] {
+	background: #ff4e4e;
+}
+
+#controls button[data-destroy]:hover,
+#controls button[data-destroy]:focus {
+	background: #ff7070;
+}
+
+#boxes {
+	gap: 44px;
+}
+
+/* #endregion */
