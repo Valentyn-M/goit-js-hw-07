@@ -26,18 +26,15 @@ function createBoxes(amount) {
 
 	let squareWidth = 30;
 	let squareHeight = 30;
+	let squares = '';
 	for (let i = 0; i < amount; i++) {
-		const square = document.createElement('div');
-		square.style.backgroundColor = getRandomHexColor();
-		square.style.cssText = `
-			background-color: ${getRandomHexColor()};
-			width: ${squareWidth}px;
-			height: ${squareHeight}px;
-		`;
-		boxesContainer.append(square);
+		const square = `<div class="square" style="background-color: ${getRandomHexColor()}; width: ${squareWidth}px; height: ${squareHeight}px;"></div>`;
+		squares += square;
 		squareWidth += 10;
 		squareHeight += 10;
 	}
+
+	boxesContainer.insertAdjacentHTML("beforeend", squares);
 }
 
 buttonDestroy.addEventListener('click', removeCollection);

@@ -27,8 +27,11 @@ const images = [
 
 const galleryList = document.querySelector('.gallery');
 
+let galleryItems = '';
 for (let i = 0; i < 3; i++) {
 	const image = images[i];
 	const galleryItem = `<li class="galery-item"><img class="galery-img" src="${image.url}" alt="${image.alt}" width="1260" height="750"></li>`;
-	galleryList.insertAdjacentHTML("beforeend", galleryItem);
+	galleryItems += galleryItem;
 }
+
+galleryList.insertAdjacentHTML("beforeend", galleryItems);
